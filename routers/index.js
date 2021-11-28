@@ -1,12 +1,12 @@
 const express = require("express");
 const { responseData } = require("../constants");
+const { apiUrls } = require("../constants/apis");
 const router = express.Router();
 
-router.get("/api", (req, res) => {
+router.get(apiUrls.index, (req, res) => {
   const data = responseData();
   try {
-    data.result = "Pacific API";
-    return res.status(200).send(data);
+    return res.status(200).send("Pacific API");
   } catch (err) {
     console.log("오류: ", err);
     data.error = 1;
