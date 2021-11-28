@@ -1,9 +1,6 @@
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-// import { homeTest } from 'test';
-// import { fullCourseTest } from 'test';
 
 class Root extends App {
   render () {
