@@ -8,3 +8,5 @@ const Index = () => {
 }
 
 export default Index;
+export {default as homeTest} from './homeTest';
+export {default as fullCourseTest} from './fullCourseTest';
