@@ -49,6 +49,10 @@ nextApp.prepare().then(() => {// back 서버에서의 const nextApp = express()
     }),
   );
 
+  let apiIndex = require("./routers/index");
+
+  app.use("/", apiIndex);
+
   app.get('*', (req, res) => { // 모든 get 요청 처리
     return handle(req, res); // next의 get 요청 처리기
   });
