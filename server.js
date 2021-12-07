@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const server = require("http").Server(app);
 const cors = require("cors");
+const path = require("path");
 
 const dev = process.env.NODE_ENV !== 'production';
 const prod = process.env.NODE_ENV === 'production';
@@ -16,27 +17,7 @@ const nextApp = next({ dev }); // next 모듈을 사용
 const handle = nextApp.getRequestHandler();
 
 nextApp.prepare().then(() => {// back 서버에서의 const nextApp = express()
-
-  app.get("/service-worker.js", (req, res) => {
-    nextApp.serveStatic(req, res, "./.next/service-worker.js");
-  });
-
-  const serviceWorkers = [
-    {
-      filename: "service-worker.js",
-      path: "./.next/service-worker.js",
-    },
-    {
-      filename: "firebase-messaging-sw.js",
-      path: "./public/firebase-messaging-sw.js",
-    },
-  ];
-
-  serviceWorkers.forEach(({ filename, path }) => {
-    app.get(`/${filename}`, (req, res) => {
-      nextApp.serveStatic(req, res, path);
-    });
-  });
+  app.use(express.static(path.join(__dirname, 'public')));
 
   app.use(morgan('dev'));
   app.use(express.json());
