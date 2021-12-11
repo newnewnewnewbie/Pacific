@@ -1,9 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css";
-import { render } from "react-dom";
 
 const Index = () => {
   const settings = {
