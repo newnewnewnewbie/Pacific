@@ -1,38 +1,43 @@
 import React from "react";
 import Link from "next/link";
-import { Carousel } from "react-responsive-carousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css";
+import { render } from "react-dom";
 
 const Index = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
     <div>
       <h2>맞춤 믹스: 분위기</h2>
       <div>
-      <Carousel showArrows={true}>
-                <div>
-                    <img src="images/unnamed.jpg" />
-                    <p className="legend">Legend 1</p>
-                </div>
-                <div>
-                    <img src="images/unnamed.jpg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src="images/unnamed.jpg" />
-                    <p className="legend">Legend 3</p>
-                </div>
-                <div>
-                    <img src="images/unnamed.jpg" />
-                    <p className="legend">Legend 4</p>
-                </div>
-                <div>
-                    <img src="images/unnamed.jpg" />
-                    <p className="legend">Legend 5</p>
-                </div>
-                <div>
-                    <img src="images/unnamed.jpg" />
-                    <p className="legend">Legend 6</p>
-                </div>
-            </Carousel>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3> 
+            </div>
+        </Slider>
+
       </div>
       <p>기본 설정중..</p>
       <Link href="/test/homeTest">
