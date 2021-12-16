@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Slider from "react-slick";
 
-function SampleNextArrow(props) {
+const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
+const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -28,21 +28,20 @@ const Index = () => {
   const settings = {
     arrows: true,
     dots: false,
-    speed: 1000,
     infinite: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    slidesToShow: 6,
-    slidesToScroll: 3
+    slidesToShow: 3,
+    slidesToScroll: 1
   };
   return (
     <div>
-      <h2>맞춤 믹스: 분위기</h2>
+      <h1>맞춤 믹스: 분위기</h1>
       <div>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
             <img src="images/unnamed.jpg" />
+            <p>설명1</p>
           </div>
           <div>
             <img src="images/unnamed.jpg" />
@@ -59,30 +58,31 @@ const Index = () => {
           <div>
             <img src="images/unnamed.jpg" />
           </div>
-          <div>
-            <h3>7</h3>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          
         </Slider>
 
       </div>
-      <p>기본 설정중..</p>
+      <div>
+        <h1>내 보관함에 있는 음악</h1>
+        <div>
+          <Slider {...settings}>
+            <div>
+              <img src="images/unnamed.jpg" />
+              <p>설명1</p>
+            </div>
+            <div>
+              <img src="images/unnamed.jpg" />
+              <p>설명2</p>
+            </div>
+            <div>
+              <img src="images/unnamed.jpg" />
+              <p>설명3</p>
+            </div>
+          </Slider>
+        </div>
+      </div>
+      <div>
+        <h1>즐겨 듣는 음악</h1>
+      </div>
       <Link href="/test/homeTest">
         <button>homeTest로 이동</button>
       </Link>
