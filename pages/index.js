@@ -18,7 +18,7 @@ const SamplePrevArrow = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", background: "black" }}
       onClick={onClick}
     />
   );
@@ -40,23 +40,34 @@ const Index = () => {
       <div>
         <Slider {...settings}>
           <div>
-            <img src="images/unnamed.jpg" />
-            <p>설명1</p>
+            <img src="images/WorkOutSupermix.jpg" />
+            <div><p>운동 슈퍼믹스</p></div>
+            <div><p>조성모님, 네온 트리스님, 척님, YB님</p></div>
+          </div>
+          <div>
+            <img src="images/WorkOutMix1.jpg" />
+            <div><p>운동 슈퍼믹스</p></div>
+            <div><p>조성모님, 네온 트리스님, 척님, YB님</p></div>
+          </div>
+          <div>
+            <img src="images/WorkOutMix2.jpg" />
+            <div><p>운동 슈퍼믹스</p></div>
+            <div><p>조성모님, 네온 트리스님, 척님, YB님</p></div>
+          </div>
+          <div>
+            <img src="images/WorkOutMix3.jpg" />
+            <div><p>운동 슈퍼믹스</p></div>
+            <div><p>조성모님, 네온 트리스님, 척님, YB님</p></div>
           </div>
           <div>
             <img src="images/unnamed.jpg" />
+            <div><p>운동 슈퍼믹스</p></div>
+            <div><p>조성모님, 네온 트리스님, 척님, YB님</p></div>
           </div>
           <div>
             <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
-          </div>
-          <div>
-            <img src="images/unnamed.jpg" />
+            <div><p>운동 슈퍼믹스</p></div>
+            <div><p>조성모님, 네온 트리스님, 척님, YB님</p></div>
           </div>
         </Slider>
 
